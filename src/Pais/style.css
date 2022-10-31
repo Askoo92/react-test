@@ -1,0 +1,14 @@
+h1 {
+    font-size: 45px;
+    color: darkred;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-image: url('pilved.jpeg');
+    height: 800px;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
