@@ -12,6 +12,7 @@ function App() {
   const [valitudPokemon, setValitudPokemon] = useState()
   const [pokemonid, setPokemonid] = useState([])
   const [eelmineUrl, setEelmineUrl] = useState(null)
+  const [jargmineUrl, setJargmineUrl] = useState(null)
 
   useEffect(() => {
     pariPokemonid('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
@@ -22,6 +23,7 @@ function App() {
     const laetudPokemonid = await (await fetch(url)).json()
     setPokemonid(laetudPokemonid.results)
     setEelmineUrl(laetudPokemonid.previous)
+    setJargmineUrl(laetudPokemonid.next)
   }
 
   const pariPokemoniInfo = async (url) => {
@@ -41,9 +43,9 @@ return (
         <PokemonideList pokemonid={pokemonid} pariPokemoniInfo={pariPokemoniInfo} />}
       <div>
         <div className='edasitagasi'>
-        <span onClick={() => { pariPokemonid(eelmineUrl) }}>{'<'} Eelmine leht</span>
+        <span onClick={() => { pariPokemonid(eelmineUrl) }}>{'<'} Eelmine leht </span>
         <span> | </span>
-        <span onClick={() => { pariPokemonid(jargmineUrl) }}>Järgmine leht {'>'}</span>
+        <span onClick={() => { pariPokemonid(jargmineUrl) }}> Järgmine leht {'>'}</span>
     </div>
     </div>
     </div>
