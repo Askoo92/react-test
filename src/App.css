@@ -2,13 +2,24 @@
   text-transform: capitalize;
   text-align: center;
   cursor: pointer;
-  
+  border-style: double;
+  background-color: yellowgreen;
 }
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: beige;
+  }
 
 .pokemonideinfo {
   text-transform: capitalize;
   font-weight: bold;
   text-align: center;
+  border-style: double;
+  background-color: yellowgreen;
 }
 
 .loetelu {
@@ -29,7 +40,6 @@
 
 * {
   cursor: none;
-  background-color: beige;
 }
 
 .cursor-dot,
@@ -55,3 +65,4 @@
   height: 25px;
   background-color: rgba(229, 128, 128, 0.5);
 }
+

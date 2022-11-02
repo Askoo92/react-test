@@ -2,7 +2,7 @@ const PokemonideListiElement = (props) => {
     return (
         <div className="pokemonidelist" onClick={() => { props.pariPokemoniInfo(props.pokemon.url) }}>{props.pokemon.name}</div>
     )
-}
+};
 
 const PokemonideList = (props) => {
     return (
@@ -17,6 +17,6 @@ const PokemonideList = (props) => {
             )}
         </div>
     )
-}
+};
 
 export default PokemonideList

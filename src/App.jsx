@@ -13,21 +13,21 @@ function App() {
   const [pokemonid, setPokemonid] = useState([])
   const [eelmineUrl, setEelmineUrl] = useState(null)
 
-useEffect(() => {
-  pariPokemonid('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
-}, [])
+  useEffect(() => {
+    pariPokemonid('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
+  }, [])
 
-const pariPokemonid = async (url) => {
-  if (!url) return
-  const laetudPokemonid = await (await fetch(url)).json()
-  setPokemonid(laetudPokemonid.results)
-  setEelmineUrl(laetudPokemonid.previous)
-}
+  const pariPokemonid = async (url) => {
+    if (!url) return
+    const laetudPokemonid = await (await fetch(url)).json()
+    setPokemonid(laetudPokemonid.results)
+    setEelmineUrl(laetudPokemonid.previous)
+  }
 
-const pariPokemoniInfo = async (url) => {
-  const pokemoniInfo = await (await fetch(url)).json()
-  setValitudPokemon(pokemoniInfo)
-}
+  const pariPokemoniInfo = async (url) => {
+    const pokemoniInfo = await (await fetch(url)).json()
+    setValitudPokemon(pokemoniInfo)
+  }
 
 return (
   <div className="App">
@@ -43,13 +43,12 @@ return (
         <div className='edasitagasi'>
         <span onClick={() => { pariPokemonid(eelmineUrl) }}>{'<'} Eelmine leht</span>
         <span> | </span>
-        <span onClick={() => { }}>Järgmine leht {'>'}</span>
+        <span onClick={() => { pariPokemonid(jargmineUrl) }}>Järgmine leht {'>'}</span>
     </div>
     </div>
     </div>
 )
-}
-
+};
 
 
 export default App
