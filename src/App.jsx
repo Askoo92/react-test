@@ -43,9 +43,9 @@ return (
         <PokemonideList pokemonid={pokemonid} pariPokemoniInfo={pariPokemoniInfo} />}
       <div>
         <div className='edasitagasi'>
-        <span onClick={() => { pariPokemonid(eelmineUrl) }}>{'<'} Eelmine leht </span>
+        <span onClick={() => { pariPokemonid(eelmineUrl) }}>{'<'} Eelmised pokemonid</span>
         <span> | </span>
-        <span onClick={() => { pariPokemonid(jargmineUrl) }}> Järgmine leht {'>'}</span>
+        <span onClick={() => { pariPokemonid(jargmineUrl) }}> Järgmised pokemonid {'>'}</span>
     </div>
     </div>
     </div>
